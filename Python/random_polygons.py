@@ -14,12 +14,7 @@ def polyPoints(sides,radius, x_centre,y_centre):
         points.append(Point(x,y))
     return points
         
-##def Randcolor():
-##    color = []
-##    for i in range(3):
-##        c = random.randint(0,255)
-##        color.append(c)
-##    return color
+
         
 
 def main():
