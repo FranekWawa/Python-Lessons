@@ -14,20 +14,18 @@ def polyPoints(sides,radius, x_centre,y_centre):
         points.append(Point(x,y))
     return points
         
-##def Randcolor():
-##    color = []
-##    for i in range(3):
-##        c = random.randint(0,255)
-##        color.append(c)
-##    return color
-        
-
+def Randcolor():
+    r = random.randint(0,255)
+    g = random.randint(0,255)    
+    b = random.randint(0,255)
+    return color_rgb(r,g,b)
 def main():
     win = GraphWin("My Circle", 500, 500)
     win.setBackground('blue')
     while True:
         number = random.randint(2,10)
         Cursor = win.getMouse()
+        color = Randcolor()
         x = Cursor.getX()
         y = Cursor.getY()
         if number == 2:
@@ -35,7 +33,7 @@ def main():
         if number > 2:
             points = polyPoints(number, 20,x,y)
             s = Polygon(points)
-        s.setFill(color_rgb(random.randint(0,255),random.randint(0,255),random.randint(0,255)))
+        s.setFill(color)
         
         s.draw(win)
     
