@@ -61,7 +61,14 @@ def main():
                 shape.undraw()
                 shape.setFill(randColor())
                 shape.draw(win)
-            i = 0    
+            i = 0
+
+        #move random shape
+        shape = random.choice(shapes)
+        shape.undraw()
+        shape.move(10,10)
+        shape.draw(win)
+            
     
 
 main()
